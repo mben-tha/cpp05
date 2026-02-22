@@ -6,14 +6,15 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:02:59 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/31 18:17:52 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/01 12:17:34 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+#include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target, std::string name, int sign_grade, int execute_grade)
- : AForm(name, sign_grade, execute_grade), m_target(target) {}
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+ : AForm("ShrubberyCreationForm", 145, 137), m_target(target) {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const& copy)
  : AForm(copy), m_target(copy.m_target) {}
@@ -30,7 +31,17 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	return (*this);
 }
 
-void	ShrubberyCreationForm::executeF()
+void	ShrubberyCreationForm::executeF() const
 {
-	
+	std::string	file_name = m_target + "_shrubbery";
+	std::ofstream	new_file(file_name.c_str());
+	if (not new_file)
+		return ;
+
+	new_file << "    /\\" << '\n';
+	new_file << "   /**\\" << '\n';
+	new_file << "  /*  *\\" << '\n';
+	new_file << " /*    *\\" << '\n';
+	new_file << "/*      *\\" << '\n';
+	new_file << "    ||" << '\n';
 }

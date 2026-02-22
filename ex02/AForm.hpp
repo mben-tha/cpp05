@@ -37,7 +37,7 @@ public:
 
 	void	execute(Bureaucrat const & executor) const;
 
-	virtual void	executeF();
+	virtual void	executeF() const = 0;
 
 	class	FormNotSigned : public std::exception
 	{
@@ -66,7 +66,7 @@ public:
 			}
 	};
 
-protected:
+private:
 
 	std::string const	m_name;
 	bool				m_is_signed;
@@ -75,6 +75,6 @@ protected:
 
 };
 
-std::ostream& operator<<(std::ostream &flow, AForm const& AForm);
+std::ostream& operator<<(std::ostream &flow, AForm const& aForm);
 
 #endif

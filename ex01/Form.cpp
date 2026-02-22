@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 19:48:11 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/30 23:18:32 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/22 12:44:56 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ std::ostream& operator<<(std::ostream &flow, Form const& form)
 	std::string sign;
 
 	if (form.getIsSigned())
-		sign = "is signed";
+		sign = " is signed";
 	else
-		sign = "is not signed";
+		sign = " is not signed";
 
-	flow << form.getName() << " was " << sign;
+	flow << form.getName() << sign;
 	flow << " (grade for signed : " << form.getSignGrade();
 	flow << ") (grade for execute : " << form.getExecGrade() << ")";
 

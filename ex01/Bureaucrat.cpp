@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 15:54:39 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/30 23:24:11 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/22 12:48:22 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void	Bureaucrat::signForm(Form& f)
 	try
 	{
 		f.beSigned(*this);
+		std::cout << m_name << " signed " << f.getName() << std::endl;
 	}
 	catch(const std::exception& e)
 	{

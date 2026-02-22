@@ -6,22 +6,24 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:00:07 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/31 18:02:20 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/01 19:51:01 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
+#include <string>
 
 class	RobotomyRequestForm : public	AForm
 {
 public:
-	RobotomyRequestForm(std::string target, std::string name, int sign_grade, int execute_grade);
+	RobotomyRequestForm(std::string target);
 	RobotomyRequestForm(RobotomyRequestForm const& copy);
 	~RobotomyRequestForm();
 	RobotomyRequestForm& operator=(RobotomyRequestForm const& copy);
 
-	virtual void	executeF();
+	virtual void	executeF() const;
 
 private:
 	std::string	m_target;
+
 };

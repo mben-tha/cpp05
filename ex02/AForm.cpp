@@ -57,18 +57,18 @@ int	AForm::getExecGrade() const
 	return (m_execute_grade);
 }
 
-std::ostream& operator<<(std::ostream &flow, AForm const& AForm)
+std::ostream& operator<<(std::ostream &flow, AForm const& aForm)
 {
 	std::string sign;
 
-	if (AForm.getIsSigned())
+	if (aForm.getIsSigned())
 		sign = " is signed";
 	else
 		sign = " is not signed";
 
-	flow << AForm.getName() << sign;
-	flow << " (grade for signed : " << AForm.getSignGrade();
-	flow << ") (grade for execute : " << AForm.getExecGrade() << ")";
+	flow << aForm.getName() << sign;
+	flow << " (grade for signed : " << aForm.getSignGrade();
+	flow << ") (grade for execute : " << aForm.getExecGrade() << ")";
 
 	return (flow);
 }
@@ -90,4 +90,5 @@ void	AForm::execute(Bureaucrat const & executor) const
 		throw FormNotSigned();
 	if (executor.getGrade() > m_execute_grade)
 		throw GradeTooLowException();
+	executeF();
 }

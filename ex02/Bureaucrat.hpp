@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 16:29:37 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/31 12:59:10 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/01 20:45:36 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ public:
 
 	void	incrementGrade();
 	void	decrementGrade();
+
+	void	executeForm(AForm const & form) const;
 
 	class	GradeTooHighException : public std::exception
 	{

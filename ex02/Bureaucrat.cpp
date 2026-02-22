@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 15:54:39 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/31 12:59:10 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/01 20:59:04 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,3 +88,26 @@ void	Bureaucrat::signAForm(AForm& f)
 		<< " because " << e.what() << std::endl;
 	}
 }
+
+void	Bureaucrat::executeForm(AForm const & form) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << m_name << " executed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << m_name << " couldn’t execute " << form.getName() << " because " << e.what() << '\n';
+	}
+	
+}
+// void	Bureaucrat::executeForm(AForm const & form) const
+// {
+// 	if (not form.getIsSigned())
+// 		std::cout << m_name << " canot execute " << form.getName() << std::endl;
+// 	else if (m_grade > form.getExecGrade())
+// 		std::cout << m_name << " canot execute " << form.getName() << std::endl;
+// 	else
+// 		form.execute(*this);
+// }

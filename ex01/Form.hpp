@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 17:25:54 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/30 23:23:50 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/22 12:36:15 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ public:
 		public:
 			virtual const char* what() const throw()
 			{
-				return ("Grade is too high for a form");
+				return ("Grade is too high for this form");
 			}
 	};
 
@@ -49,7 +49,7 @@ public:
 		public:
 			virtual const char* what() const throw()
 			{
-				return ("Grade is too low for sign this form");
+				return ("Grade is too low for this form");
 			}
 	};
 

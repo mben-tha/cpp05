@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 16:25:39 by mehdi             #+#    #+#             */
-/*   Updated: 2026/01/30 23:23:17 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/22 12:53:27 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ int main()
 {
 	try
 	{
-		Bureaucrat	b1("mehdi", 20);
-		Form		G20("Doc", 5, 8);
+		Bureaucrat	b1("mehdi", 5);
+		Form		G20("g20", 5, 8);
 		
+		G20.beSigned(b1);
 		b1.signForm(G20);
 		std::cout << G20;
 	}
