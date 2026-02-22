@@ -48,12 +48,21 @@ public:
 			}
 	};
 
+	class	FormCannotExecute : public std::exception
+	{
+		public:
+			virtual const char* what() const throw()
+			{
+				return ("The form cannot be executed");
+			}
+	};
+
 	class	GradeTooHighException : public std::exception
 	{
 		public:
 			virtual const char* what() const throw()
 			{
-				return ("Grade is too high for a AForm");
+				return ("Grade is too high for this Form");
 			}
 	};
 
@@ -62,7 +71,7 @@ public:
 		public:
 			virtual const char* what() const throw()
 			{
-				return ("Grade is too low for sign this AForm");
+				return ("Grade is too low for this Form");
 			}
 	};
 

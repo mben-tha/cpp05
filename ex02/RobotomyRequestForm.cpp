@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 12:28:45 by mehdi             #+#    #+#             */
-/*   Updated: 2026/02/01 19:40:22 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/22 14:15:41 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const& c
 
 void	RobotomyRequestForm::executeF() const
 {
-	std::cout << "* brrrKhRRRRSsssssssss *" << std::endl;
+	std::cout << "Makes some drilling noise : * brrrKhRRRRSsssssssss *" << std::endl;
 
 	int	nb = rand();
 	nb %= 2;

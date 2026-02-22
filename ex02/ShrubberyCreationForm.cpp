@@ -6,7 +6,7 @@
 /*   By: mehdi <mehdi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 18:02:59 by mehdi             #+#    #+#             */
-/*   Updated: 2026/02/01 12:17:34 by mehdi            ###   ########.fr       */
+/*   Updated: 2026/02/22 14:10:42 by mehdi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ShrubberyCreationForm::executeF() const
 	std::string	file_name = m_target + "_shrubbery";
 	std::ofstream	new_file(file_name.c_str());
 	if (not new_file)
-		return ;
+		throw FormCannotExecute();
 
 	new_file << "    /\\" << '\n';
 	new_file << "   /**\\" << '\n';
@@ -44,4 +44,29 @@ void	ShrubberyCreationForm::executeF() const
 	new_file << " /*    *\\" << '\n';
 	new_file << "/*      *\\" << '\n';
 	new_file << "    ||" << '\n';
+	new_file << "\n\n\n";
+
+	new_file << "    /\\" << '\n';
+	new_file << "   /**\\" << '\n';
+	new_file << "  /*  *\\" << '\n';
+	new_file << " /*    *\\" << '\n';
+	new_file << "/*      *\\" << '\n';
+	new_file << "    ||" << '\n';
+	new_file << "\n\n\n";
+
+	new_file << "    /\\" << '\n';
+	new_file << "   /**\\" << '\n';
+	new_file << "  /*  *\\" << '\n';
+	new_file << " /*    *\\" << '\n';
+	new_file << "/*      *\\" << '\n';
+	new_file << "    ||" << '\n';
+	new_file << "\n\n\n";
+
+	new_file << "    /\\" << '\n';
+	new_file << "   /**\\" << '\n';
+	new_file << "  /*  *\\" << '\n';
+	new_file << " /*    *\\" << '\n';
+	new_file << "/*      *\\" << '\n';
+	new_file << "    ||" << '\n';
+	new_file << "\n\n\n";
 }
